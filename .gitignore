@@ -1,0 +1,11 @@
+# MiliFrame private state and environment
+.env
+.frame-control/
+docs/frame-version.md
+docs/stage-control.md
+# MiliFrame local agent files
+.codex/
+.claude/
+CLAUDE.md
+AGENTS.md
+/article

@@ -8,4 +8,7 @@ docs/stage-control.md
 .claude/
 CLAUDE.md
 AGENTS.md
+# Python runtime caches
+__pycache__/
+*.py[cod]
 /article

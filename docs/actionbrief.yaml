@@ -3787,6 +3787,19 @@ figureDictionary:
     figureId: fig_ageing_population_concentration_and_candidate_medical_access
     figurePath: data/results/figures/Figure_ageing_population_concentration_and_candidate_medical_access.png
     figureCaption: Ageing Population Concentration And Candidate Medical Access
+    figurePanelCount: 2
+    figureNote: >-
+      (a) Official-support population aged 65 or older among known ages versus
+      population-weighted candidate medical distance; (b) population density versus the same
+      distance. All 145,771 selected official publication supports enter each panel once.
+      Hexagon colors count supports, using a shared logarithmic count scale. Density uses
+      complete member-mesh areas, including water, and a logarithmic horizontal axis; distance
+      uses square-root coordinates with original kilometer labels. Orange lines are separate
+      unweighted linear fits in those display coordinates. Black notes report matching Pearson
+      correlations and regression R-squared. Full-support age and density denominators differ
+      from the finite-path population denominator for distance. Age counts are not
+      redistributed to member meshes. These are unadjusted area-level associations, not causal
+      effects or individual older-resident access.
     figureAim: Describe area-level age/access and population-density/access distributions using count-binned scatter
       displays, simple straight trends in the existing display coordinates and matching Pearson correlations, without
       assigning older residents to member meshes.
@@ -3834,6 +3847,15 @@ figureDictionary:
     figureId: fig_analysis_sample_coverage
     figurePath: data/results/figures/Figure_analysis_sample_coverage.png
     figureCaption: Analysis Sample Coverage
+    figurePanelCount: 1
+    figureNote: >-
+      Retained and excluded baseline meshes are mapped as native one-mesh raster pixels. The
+      retained sample contains 175,612 meshes and 125,874,788 residents. Display classes are
+      mutually exclusive: undefined age takes precedence for the single overlapping age/path
+      exclusion. The exclusion-detail inset repeats original cells for visibility and defines
+      no new sample. Island views provide geographic coverage and are not separate analytical
+      panels. Unobserved locations remain transparent; pending road entry does not establish
+      physical isolation. This map documents baseline coverage, not maintenance protection.
     figureAim: Document retained and excluded mesh locations in the appendix to make the baseline sample boundary
       transparent.
     figureExplanation: 'The 200 pending-entry exclusions include one mesh also excluded by age; mutually exclusive
@@ -3865,6 +3887,20 @@ figureDictionary:
     figureId: fig_common_budget_maintenance_protection_and_distribution
     figurePath: data/results/figures/Figure_common_budget_maintenance_protection_and_distribution.png
     figureCaption: Common Budget Maintenance Protection And Distribution
+    figurePanelCount: 3
+    figureNote: >-
+      (a) Additional finite-route medical-distance burden avoided; (b) lost-medical-path
+      population protected; (c) reachability protection within higher-aging and
+      longer-baseline-distance areas. The lower-right layout cell contains legends and sample
+      notes, not a fourth analytical panel. Colors identify traffic, condition and access
+      priorities; solid and dashed lines distinguish the two overlapping area groups in panel
+      c. Curves connect evaluations at one-percentage-point budget intervals. Budgets use
+      summed bridge-length-times-width relative cost across 46,688 conditional units;
+      complete-prefix selection can leave unused resources. Selecting a unit fully prevents
+      its own equally weighted, mutually exclusive single-road event. Reachability and
+      finite-route burden have separate loss denominators. Protection is conditional on
+      assumed bridge-road associations and intervention effects, not annual risk, unique
+      beneficiaries, pavement outcomes or proven optimality.
     figureAim: 'Compare three adopted priority lists on the conditional common bridge-associated road domain: aggregate
       finite-route protection, reachability protection and area-group reachability protection against requested
       relative budget.'
@@ -3934,6 +3970,16 @@ figureDictionary:
     figureId: fig_national_candidate_medical_distance
     figurePath: data/results/figures/Figure_national_candidate_medical_distance.png
     figureCaption: National Candidate Medical Distance
+    figurePanelCount: 1
+    figureNote: >-
+      Native population meshes show candidate network distance to the nearest included
+      registered hospital or general clinic; gray cells mark excluded baseline records. The
+      retained sample contains 175,612 meshes and 125,874,788 residents. Distance colors use
+      square-root normalization across the full finite range without clipping. Island views
+      complete geographic coverage and do not constitute additional analytical panels.
+      Unobserved locations remain transparent. Population and medical registrations refer to
+      2020 and the candidate road configuration to 2024. The undirected distance metric does
+      not establish legal vehicle routes, travel time or current medical-service availability.
     figureAim: Locate candidate medical-distance disadvantage within the selected baseline sample in the main manuscript.
     figureExplanation: 'The baseline maps the retained 175,612 original mesh origins and 125,874,788 residents to
       registered hospitals/general clinics. Original excluded meshes remain grey rather than being treated as zero-distance
@@ -3963,6 +4009,18 @@ figureDictionary:
     figureId: fig_national_distribution_of_residual_pavement_access_burden
     figurePath: data/results/figures/Figure_national_distribution_of_residual_pavement_access_burden.png
     figureCaption: National Distribution Of Residual Pavement Access Burden
+    figurePanelCount: 4
+    figureNote: >-
+      (a) All-unmaintained reference; (b-d) traffic, condition and access priorities at a 1%
+      requested national pavement budget and 25% impedance increment. Each mesh contributes
+      its original population multiplied by excess generalized medical-access cost and
+      converted to resident reference-kilometer equivalents. Panels share geographic bounds
+      and a linear 0-1000 color scale; zero is blue and values above 1000 saturate at the
+      upper color. Saturation changes only display colors. Excluded or unobserved meshes are
+      NoData. All 21,415,800 accepted candidate source-road records are eligible for the
+      assumed impairment and maintenance effect; missing traffic and condition inputs use
+      disclosed hypothetical constructions. The maps locate remaining population-weighted
+      burden, not maintained roads, observed journey distances or distinct beneficiaries.
     figureAim: Locate population-weighted residual burden in the all-road reference and three national 1% policies
       under the 25% increment.
     figureExplanation: 'The national 25% reference sums to 21,216,259.39 resident reference-km. At 1%, residual
@@ -3996,6 +4054,18 @@ figureDictionary:
     figureId: fig_national_pavement_maintenance_protection_under_budget_constraints
     figurePath: data/results/figures/Figure_national_pavement_maintenance_protection_under_budget_constraints.png
     figureCaption: National Pavement Maintenance Protection Under Budget Constraints
+    figurePanelCount: 4
+    figureNote: >-
+      (a-c) Protection for all selected residents, higher-aging areas and
+      baseline-distance-disadvantaged areas at requested budgets of 1%, 5%, 10% and 20%, under
+      the 25% unmaintained-road impedance increment; (d) aggregate protection at a 1% budget
+      under 10%, 25% and 50% increments. Panel d keeps the 25% priority lists and selections
+      fixed. Protection divides avoided excess generalized medical-access burden by the same
+      group all-unmaintained reference. Area groups overlap and have separate denominators.
+      Lines connect evaluated budgets only. The national scenario covers 21,415,800 accepted
+      source-road records, using source-length-relative costs and explicitly hypothetical
+      missing inputs. These are conditional policy comparisons, not observed repair effects,
+      travel-time savings or individual older-resident outcomes.
     figureAim: Compare three conditional national priorities across four expanded-domain budgets, with aggregate
       and fixed area-group protection and the adopted impedance comparison.
     figureExplanation: 'At 1% requested national cost, access priority protects 57.28% of aggregate reference burden
@@ -4026,6 +4096,18 @@ figureDictionary:
     figureId: fig_national_spatial_allocation_of_pavement_maintenance
     figurePath: data/results/figures/Figure_national_spatial_allocation_of_pavement_maintenance.png
     figureCaption: National Spatial Allocation Of Pavement Maintenance
+    figurePanelCount: 4
+    figureNote: >-
+      (a-c) Traffic, condition and access allocations at a common 1% requested national
+      length-relative budget; (d) count-based Jaccard overlap between the corresponding unique
+      selected source-road sets. Map colors show selected source-road length divided by all
+      candidate source-road length within each native 1-km mesh. Clipped source curves
+      allocate original record costs proportionally, conserving lengths; all road-bearing
+      meshes are included. The shared map scale is linear 0-5%, with upper saturation above
+      5%; zero is blue and absent road denominators are NoData. Panel d uses a separate 0-100%
+      overlap scale and does not weight length, population or benefit. The budget is a share
+      of total relative source length, not road counts or money. Road locations do not
+      identify protected residents, verified repairs or physical bridge footprints.
     figureAim: Compare where the three national rules allocate road-length resources at a common 1% budget and how
       their selected source-road sets overlap; distinguish allocation locations from residual burden and resident
       protection.
@@ -4060,6 +4142,18 @@ figureDictionary:
     figureId: fig_pavement_maintenance_protection_under_budget_constraints
     figurePath: data/results/figures/Figure_pavement_maintenance_protection_under_budget_constraints.png
     figureCaption: Pavement Maintenance Protection Under Budget Constraints
+    figurePanelCount: 4
+    figureNote: >-
+      (a-c) Protection for all selected residents, higher-aging areas and
+      baseline-distance-disadvantaged areas at requested budgets of 1%, 5%, 10% and 20%, under
+      the 25% unmaintained-road impedance increment; (d) aggregate protection at a 1% budget
+      under 10%, 25% and 50% increments with the baseline priority lists and selections fixed.
+      This independent observed-input comparison uses 70,049 conditional pavement roads; other
+      roads remain at baseline cost in the full routing network. Protection divides avoided
+      excess generalized medical-access burden by the same group all-unmaintained reference.
+      Groups overlap and have separate denominators. Costs are relative road lengths and lines
+      connect evaluated budgets only. Results are conditional on assumed finite impairment,
+      not observed repair effects or individual older-resident outcomes.
     figureAim: Compare aggregate and fixed area-group protection across the four adopted budgets, and show fixed-selection
       impedance sensitivity at a 1% requested budget.
     figureExplanation: 'At 1% of the independent 70,049-road length cost, access protects 25.66% overall, 5.54%
@@ -4088,6 +4182,19 @@ figureDictionary:
     figureId: fig_population_roads_and_medical_destinations
     figurePath: data/results/figures/Figure_population_roads_and_medical_destinations.png
     figureCaption: Population Roads And Medical Destinations
+    figurePanelCount: 4
+    figureNote: >-
+      (a) National locator for the Kyoto example window; (b) published residents per native
+      1-km mesh on an unclipped logarithmic color scale; (c) candidate vehicle-road source
+      curves; (d) included registered hospitals and general clinics over the same roads and
+      population raster. Panels b-d share geographic bounds and map scale, while panel a
+      supplies national context. The rectangular window contains 907 published meshes,
+      1,489,760 residents, 98 hospitals and 1,670 general clinics; these are window counts
+      rather than municipal totals. Kyoto is an illustrative setting, not a representative
+      national sample. Unpublished population cells remain transparent and no age
+      interpolation occurs. Population and medical registrations refer to 2020, roads to 2024.
+      Registered destinations do not verify current opening or capacity; this display does not
+      estimate maintenance effects or travel time.
     figureAim: 'Explain the spatial relationship of accessibility inputs in a two-by-two appendix display: national
       location context and matched local views of population meshes, candidate roads, and included hospitals/clinics
       over population and roads in a recognizable urban-periphery setting.'
@@ -4126,6 +4233,18 @@ figureDictionary:
     figureId: fig_priority_stability_under_budget_and_demographic_scenarios
     figurePath: data/results/figures/Figure_priority_stability_under_budget_and_demographic_scenarios.png
     figureCaption: Priority Stability Under Budget And Demographic Scenarios
+    figurePanelCount: 1
+    figureNote: >-
+      Access-priority selected-unit Jaccard similarity relative to matched 2020 is shown at
+      requested bridge budgets of 1%, 5%, 10% and 20%. Lines connect 2020, 2030, 2040 and 2050
+      scenario evaluations; the vertical axis spans 65-102%. Jaccard measures intersection
+      count divided by union count, not ranking correlation or accessibility protection.
+      Official spatial population-change factors reweight census population on 175,485 matched
+      origins, retaining 125,874,510 residents at matched 2020; 127 unmatched origins and 278
+      residents are excluded only from this comparison. All 46,688 conditional bridge units
+      and system inputs remain fixed while access priorities are reranked. The former
+      protection panel is now a separate table. This is a conditional bridge demographic
+      sensitivity, not a pavement forecast or a projection of older-resident locations.
     figureAim: Compare access-priority selected-set Jaccard stability at four requested budgets under official spatial
       population reweighting; tabulate protection outcomes separately.
     figureExplanation: 'Sixteen selected-set overlaps compare matched 2020 with four population scenario years at
@@ -4164,6 +4283,20 @@ figureDictionary:
     figureId: fig_road_service_dependence_and_measured_traffic
     figurePath: data/results/figures/Figure_road_service_dependence_and_measured_traffic.png
     figureCaption: Road Service Dependence And Measured Traffic
+    figurePanelCount: 2
+    figureNote: >-
+      (a) Additional finite-route medical-distance burden mapped on the source-road curve
+      removed in each scenario; (b) measured daytime 12-hour traffic versus that burden, with
+      hexagon colors showing mean lost-medical-path population per road scenario. The map uses
+      log10(1 + burden) colors with a 5000 person-kilometer display cap; original values
+      remain unchanged and zero uses the blue colorbar endpoint. Panel b retains all 1,183,367
+      matched source roads, including zero-burden scenarios; they share 25,566 traffic
+      observations and are not independent traffic measurements. Its traffic axis is
+      logarithmic and its burden coordinate uses log10(1 + burden), with original-unit labels.
+      Single-source-road removal disables required fixed entries and retains parallel
+      alternatives. Path loss and additional burden among still-reachable origins are separate
+      outcomes. The map locates removed roads rather than affected homes; neither panel
+      measures pavement-maintenance benefits, annual failure risk or legal time-based routing.
     figureAim: Under the adopted single-source-road service-loss scenario, compare Lost Medical Path Population
       and Additional Medical Distance Burden with measured traffic, retaining the coverage boundary of the traffic
       comparison.
@@ -4206,13 +4339,28 @@ figureDictionary:
     figureSuitableSection: 'Main manuscript: Results'
     analysisScript: src/analyses/figure_road_service_dependence_and_measured_traffic.py
     sourceCaptionPath: data/results/figures/Figure_road_service_dependence_and_measured_traffic.caption.md
-    artifactSha256: 7a74e5e0e9ffb02ad2f59acdac1e5f5907d565b7ae2aaf04c11daea78f9349d1
+    artifactSha256: 83ae26e71a5511ee440dad725f0b7e32ebc08e97714046a7210fc8e83a9ba440
     humanAcceptance: Original output accepted in AnaSOP Section 8; subsequent export corrections have agent visual-review
       receipts, without inferring additional human acceptance.
   fig_spatial_changes_in_access_priority_maintenance_selection:
     figureId: fig_spatial_changes_in_access_priority_maintenance_selection
     figurePath: data/results/figures/Figure_spatial_changes_in_access_priority_maintenance_selection.png
     figureCaption: Spatial Changes In Access Priority Maintenance Selection
+    figurePanelCount: 4
+    figureNote: >-
+      (a-d) Access-priority bridge-unit selection for matched 2020 and census-anchored 2030,
+      2040 and 2050 population scenarios, at a common requested budget of 1% of summed
+      bridge-length-times-width relative cost. Blue marks units retained from matched 2020,
+      orange marks reference selections outside the scenario prefix and purple marks new
+      selections; units selected in neither set are not highlighted. Panel a shows the
+      reference-selected set. Source-road curves identify conditional maintenance units, not
+      verified bridge footprints or protected residents. Panels share geographic bounds and
+      island views, with selected, retained, exiting and new counts reported locally. The
+      comparison retains 175,485 matched origins and all 46,688 bridge units; 127 unmatched
+      origins with 278 residents are excluded only from this demographic comparison. Costs and
+      system inputs remain fixed. Exiting a priority prefix does not imply disappearance or
+      absence of maintenance need; these are conditional selections, not observed future
+      projects.
     figureAim: Locate retained, exiting and newly selected maintenance units relative to matched 2020 under the
       four population scenarios, at a fixed 1% requested relative-cost budget.
     figureExplanation: 'At 1% requested bridge cost, access selects 1,527 units at matched 2020 and 1,119 at 2050.
@@ -4259,6 +4407,19 @@ figureDictionary:
     figureId: fig_spatial_distribution_of_residual_pavement_access_burden
     figurePath: data/results/figures/Figure_spatial_distribution_of_residual_pavement_access_burden.png
     figureCaption: Spatial Distribution Of Residual Pavement Access Burden
+    figurePanelCount: 4
+    figureNote: >-
+      (a) All-unmaintained eligible reference; (b-d) traffic, condition and access priorities
+      at a 1% requested observed-pavement budget and 25% impedance increment. Each original
+      mesh contributes population-weighted excess generalized medical-access cost in resident
+      reference-kilometer equivalents. Only the 70,049 conditional intervention roads receive
+      the impairment and maintenance assumptions; other roads remain at baseline in the full
+      routing network. Panels share extent, island views and a linear 0-30 color scale.
+      Unequally spaced color anchors emphasize low positive burdens without changing numerical
+      normalization; zero is pale blue and values above 30 saturate at the upper color. Stored
+      burdens and population weights remain unchanged. Excluded or unobserved meshes are
+      NoData. The maps locate remaining access burden, not selected roads, actual extra travel
+      distance or distinct beneficiaries.
     figureAim: Locate population-weighted residual medical-access burden without maintenance and under the three
       rules at a 1% requested pavement budget and 25% increment.
     figureExplanation: 'The observed-domain reference is 305,716.86 resident reference-km, with 160,326 of 175,612

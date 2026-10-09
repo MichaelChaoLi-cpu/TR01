@@ -142,7 +142,8 @@ def main():
     a.set_xlim(extent[0],extent[1]);a.set_ylim(-.08,extent[3]+.03)
     xticks = np.array([2,10,100,1000,10000,100000],dtype=float)
     yticks = np.array([0,10,100,1000,10000,50000],dtype=float)
-    a.set_xticks(np.log10(xticks),[f'{v:,.0f}' for v in xticks])
+    traffic_tick_labels = ['2'] + [rf'$10^{{{int(np.log10(v))}}}$' for v in xticks[1:]]
+    a.set_xticks(np.log10(xticks),traffic_tick_labels)
     a.set_yticks(np.log10(1+yticks),[f'{v:,.0f}' for v in yticks])
     a.set_xlabel('Observed traffic volume\n(vehicles / daytime 12 h; log scale)',labelpad=3*PANEL_B_SCALE,fontsize=7.2*PANEL_B_FONT_SCALE)
     a.set_ylabel('Additional medical distance burden\n(person-km; log(1+x) scale)',labelpad=5*PANEL_B_SCALE,fontsize=7.2*PANEL_B_FONT_SCALE)
@@ -214,7 +215,7 @@ def main():
         (b,plt.cm.ScalarMappable(norm=norm_b,cmap=cmap_b),[0,1,10,100,1000,MAP_DISPLAY_VMAX],
          'Additional medical distance burden\n(person-km per road-removal scenario; log10(1+x) colour scale)')]:
         frame=ax.get_position()
-        position=panel_b_position((.65,.235,.29,.012)) if ax is a else MAP_COLOURBAR_POSITION
+        position=panel_b_position((.65,.232,.29,.012)) if ax is a else MAP_COLOURBAR_POSITION
         cax=fig.add_axes(position,zorder=10)
         label_bar(fig.colorbar(mappable,cax=cax,orientation='horizontal',
                                extend='max' if ax is b else 'neither',
@@ -275,6 +276,11 @@ def main():
                                             (main_curve_bounds[:,1]<ymin)|(main_curve_bounds[:,3]>ymax)))
     OUT.parent.mkdir(parents=True,exist_ok=True)
     check_publication_layout(fig, EXP)
+    traffic_tick_boxes = [tick.get_window_extent(fig.canvas.get_renderer())
+                          for tick in a.get_xticklabels() if tick.get_visible()]
+    traffic_tick_gap_mm = min(second.x0-first.x1
+                              for first, second in zip(traffic_tick_boxes, traffic_tick_boxes[1:]))/fig.dpi*25.4
+    assert traffic_tick_gap_mm >= .8, traffic_tick_gap_mm
     label_bar_gap_mm=(a.xaxis.label.get_window_extent(fig.canvas.get_renderer()).y0-panel_b_colourbar_axis.get_window_extent(fig.canvas.get_renderer()).y1)/fig.dpi*25.4
     assert label_bar_gap_mm >= 1.0, label_bar_gap_mm
     fig.savefig(OUT,dpi=EXPORT_DPI,facecolor='white')
@@ -319,6 +325,8 @@ def main():
        'map_colourbar_width_mm':MAP_COLOURBAR_POSITION[2]*FIGURE_SIZE_MM[0],
        'main_road_curves_clipped_by_view_bounds':clipped_main_curves,
        'panel_b_xlabel_colourbar_gap_mm':label_bar_gap_mm,
+       'panel_b_x_tick_format':'Powers of ten in original traffic units; lower reference remains 2',
+       'panel_b_minimum_x_tick_label_gap_mm':traffic_tick_gap_mm,
        'panel_b_dimension_scale':PANEL_B_SCALE,'panel_b_font_scale':PANEL_B_FONT_SCALE,
        'panel_b_outer_background':'transparent','panel_b_outer_frame_visible':False,
        'panel_b_plot_position':list(a.get_position().bounds),
